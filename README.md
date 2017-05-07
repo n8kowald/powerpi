@@ -3,7 +3,7 @@ This Raspberry Pi prepaid electricity monitor takes a photo of the amount of mon
 
 ![Monitor usage](/docs/example.jpg?raw=true "Prepaid electricity box with powerpi")
 
-# Dependencies
+# Requirements
 - Raspberry Pi (any)
 - Raspberry Pi camera module (any)
 - Enabled camera module. Run: ```sudo raspi-config``` to enable, then reboot
