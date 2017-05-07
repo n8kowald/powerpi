@@ -31,7 +31,7 @@ Edit your SSMTP config
 sudo vim /etc/ssmtp/ssmtp.conf
 ```
 
-Add / update the following settings
+Add or update the following settings
 ```bash
 root=postmaster
 mailhub=smtp.gmail.com:587
@@ -45,10 +45,12 @@ AuthUser=user@gmail.com
 AuthPass=
 ```
 
-#### Send a test email - replace user below
+#### Send a test email using your settings (replace user below)
+```bash
 echo "This is the body" | mail -s "Subject" user@gmail.com
+```
 
-Full SSMTP docs (including how to secure it): https://wiki.archlinux.org/index.php/SSMTP
+SSMTP docs (including how to secure it): https://wiki.archlinux.org/index.php/SSMTP
 
 ## Install mpack
 ```bash
