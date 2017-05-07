@@ -1,5 +1,5 @@
 # powerpi
-Raspberry Pi Prepaid Electricity monitor takes a photo of the amount of money you have left and emails it to you at a predefined time via a cronjob.
+This Raspberry Pi prepaid electricity monitor takes a photo of the amount of money you have left and emails it to you at a predefined time via a cronjob.
 
 # Install
 Clone to the ~/powerpi directory on your Raspberry Pi
@@ -19,7 +19,9 @@ Clone to the ~/powerpi directory on your Raspberry Pi
 - Play with the settings passed to 'raspistill'.
 
 # Make shell script executable
+```bash
 sudo chmod +x ~/powerpi/powerpi.sh
+```
 
 # SSMTP settings
 ```bash
