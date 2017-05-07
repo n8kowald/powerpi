@@ -4,7 +4,7 @@ This Raspberry Pi prepaid electricity monitor takes a photo of the amount of mon
 # Dependencies
 - Raspberry Pi (any)
 - Raspberry Pi camera module (any)
-- Enabled camera module, run: 'sudo raspi-config'
+- Enabled camera module, run: 'sudo raspi-config' to enable it, then reboot
 
 # Package dependencies
 - raspistill
@@ -18,22 +18,7 @@ Clone to the ~/powerpi directory on your Raspberry Pi
 ```bash
 sudo apt-get install ssmtp
 ```
-
-## Install mpack
-```bash
-sudo apt-get install mpack
-```
-
-# Configure
-- Replace RECIPIENTS="user@gmail.com" with your email address
-- Play with the settings passed to 'raspistill'.
-
-# Make shell script executable
-```bash
-sudo chmod +x ~/powerpi/powerpi.sh
-```
-
-# SSMTP settings
+### SSMTP settings
 ```bash
 # Config located: /etc/ssmtp/ssmtp.conf
 root=postmaster
@@ -46,6 +31,20 @@ AuthUser=user@gmail.com
 # Replace with your application specific password: https://security.google.com/settings/security/apppasswords
 AuthPass=
 ```
+
+## Install mpack
+```bash
+sudo apt-get install mpack
+```
+
+## Make shell script executable
+```bash
+sudo chmod +x ~/powerpi/powerpi.sh
+```
+
+# Configure
+- Replace RECIPIENTS="user@gmail.com" with your email address
+- Play with the settings passed to 'raspistill'.
 
 # Example Cron
 Edit your crontab and paste the following command
