@@ -18,6 +18,9 @@ Clone to the ~/powerpi directory on your Raspberry Pi
 - Replace RECIPIENTS="user@gmail.com" with your email address
 - Play with the settings passed to 'raspistill'.
 
+# Make shell script executable
+sudo chmod +x ~/powerpi/powerpi.sh
+
 # SSMTP settings
 ```bash
 # Config located: /etc/ssmtp/ssmtp.conf
@@ -47,7 +50,7 @@ crontab -e
 # Alias
 ```bash
 # Edit your ~/.bashrc
-Edit ~/.bashrc
+vim ~/.bashrc
 
 # Paste the following to run the script on demand
 alias elec='sh /home/pi/powerpi/powerpi.sh'
