@@ -10,9 +10,9 @@ DIR="/home/pi/powerpi/"
 RECIPIENTS="user@gmail.com"
 
 # Check dependencies
-command -v raspistill >/dev/null 2>&1 || { echo >&2 "Requires raspistill but it's not installed. Aborting."; exit 1; }
-command -v mpack >/dev/null 2>&1 || { echo >&2 "Requires mpack but it's not installed. Aborting."; exit 1; }
-command -v ssmtp >/dev/null 2>&1 || { echo >&2 "Requires ssmtp but it's not installed. Aborting."; exit 1; }
+command -v /usr/bin/raspistill >/dev/null 2>&1 || { echo >&2 "Requires raspistill but it's not installed. Aborting."; exit 1; }
+command -v /usr/bin/mpack >/dev/null 2>&1 || { echo >&2 "Requires mpack but it's not installed. Aborting."; exit 1; }
+command -v /usr/sbin/ssmtp >/dev/null 2>&1 || { echo >&2 "Requires ssmtp but it's not installed. Aborting."; exit 1; }
 
 # Take photo of power left
 echo "Taking photo... takes 7 seconds"
