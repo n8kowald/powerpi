@@ -1,7 +1,7 @@
 # powerpi
-This Raspberry Pi prepaid electricity monitor takes a photo of the amount of money you have left and emails it to you at a predefined time via a cronjob.
+This Raspberry Pi prepaid energy monitor takes a photo of the amount of money you have left and emails it to you at a predefined time via a cronjob.
 
-![Monitor usage](/docs/example.jpg?raw=true "Prepaid electricity box with powerpi")
+![Monitor usage](/docs/example.jpg?raw=true "Prepaid energy box with powerpi")
 
 # Requirements
 - Raspberry Pi (any)
