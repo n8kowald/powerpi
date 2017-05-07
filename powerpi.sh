@@ -18,7 +18,7 @@ command -v ssmtp >/dev/null 2>&1 || { echo >&2 "Requires ssmtp but it's not inst
 echo "Taking photo... takes 7 seconds"
 
 # Night mode, flip vertically and horizontally
-raspistill -ex night -vf -hf -w 650 -h 450 -t 7000 -br 57 -sh 75 -o "${DIR}${FILENAME}"
+raspistill --exposure night --vflip --hflip --width 650 --height 450 --timeout 7000 --brightness 57 --sharpness 75 --output "${DIR}${FILENAME}"
 
 # Email the captured photo
 mpack -s "$EMAIL_SUBJECT" -c image/jpeg ${DIR}${FILENAME} "$RECIPIENTS"
