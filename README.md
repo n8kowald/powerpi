@@ -66,7 +66,7 @@ sudo chmod +x ~/powerpi/powerpi.sh
 Edit your crontab by typing ```crontab -e``` and paste the following command
 
 ```bash
-# Run daily at 20:00 - generate a different time here: http://crontab-generator.org
+# Run daily at 20:00 - change the time here: http://crontab-generator.org
 0 20 * * * /home/pi/powerpi/powerpi.sh >/dev/null 2>/dev/null
 ```
 
