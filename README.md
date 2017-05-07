@@ -19,8 +19,13 @@ Clone to the ~/powerpi directory on your Raspberry Pi
 sudo apt-get install ssmtp
 ```
 ### SSMTP settings
+Edit your SSMTP config
+
 ```bash
-# Config located: /etc/ssmtp/ssmtp.conf
+sudo vim /etc/ssmtp/ssmtp.conf
+```
+
+```bash
 root=postmaster
 mailhub=smtp.gmail.com:587
 rewriteDomain=gmail.com
@@ -46,12 +51,8 @@ sudo chmod +x ~/powerpi/powerpi.sh
 - Replace RECIPIENTS="user@gmail.com" with your email address
 - Play with the settings passed to 'raspistill'.
 
-# Example Cron
-Edit your crontab and paste the following command
-```bash
-# Edit crontab
-crontab -e
-```
+# Create the cronjob
+Edit your crontab by typing ```crontab -e``` and paste the following command
 
 ```bash
 # Run daily at 20:00 - generate a different time here: http://crontab-generator.org
