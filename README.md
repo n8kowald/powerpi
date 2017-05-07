@@ -28,6 +28,7 @@ Edit your SSMTP config
 sudo vim /etc/ssmtp/ssmtp.conf
 ```
 
+Add / update the following settings
 ```bash
 root=postmaster
 mailhub=smtp.gmail.com:587
@@ -50,10 +51,6 @@ sudo apt-get install mpack
 sudo chmod +x ~/powerpi/powerpi.sh
 ```
 
-# Configure
-- Replace ```RECIPIENTS="user@gmail.com"``` with your email address in ~/powerpi/powerpi.sh
-- Play with the settings passed to 'raspistill' to get the best photo quality
-
 # Create the cronjob
 Edit your crontab by typing ```crontab -e``` and paste the following command
 
@@ -61,6 +58,10 @@ Edit your crontab by typing ```crontab -e``` and paste the following command
 # Run daily at 20:00 - generate a different time here: http://crontab-generator.org
 0 20 * * * /home/pi/powerpi/powerpi.sh >/dev/null 2>/dev/null
 ```
+
+# Configure
+- Replace ```RECIPIENTS="user@gmail.com"``` with your email address in ~/powerpi/powerpi.sh
+- Play with the settings passed to 'raspistill' to get the best photo quality
 
 # Alias
 ```bash
