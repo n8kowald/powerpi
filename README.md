@@ -71,16 +71,16 @@ Edit your crontab by typing ```crontab -e``` and paste the following command
 ```
 
 # Configure
-- Replace ```RECIPIENTS="user@gmail.com"``` with your email address in ```~/powerpi/powerpi.sh```
-- Play with the settings passed to 'raspistill' to get the best photo for your light conditions
+- Edit ```~/powerpi/powerpi.sh``` and replace ```RECIPIENTS="user@gmail.com"``` with your email address
+- Play with the settings passed to 'raspistill' to get the best photo for YOUR light conditions
 
 # Alias (optional)
-Trigger the script by typing 'elec', or whatever you want.
+Run this script by typing 'powerpi', or change the alias name.
 
 ```bash
 # Edit your ~/.bashrc
 vim ~/.bashrc
 
 # Paste the following to run the script on demand
-alias elec='sh /home/pi/powerpi/powerpi.sh'
+alias powerpi='sh /home/pi/powerpi/powerpi.sh'
 ```
