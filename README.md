@@ -15,7 +15,7 @@ This Raspberry Pi prepaid electricity monitor takes a photo of the amount of mon
 - mpack
 
 # Install
-Clone to the ~/powerpi directory on your Raspberry Pi
+Clone to the ``~/powerpi`` directory on your Raspberry Pi
 ```bash
 git clone https://github.com/n8kowald/powerpi.git ~/powerpi
 ```
@@ -38,11 +38,17 @@ mailhub=smtp.gmail.com:587
 rewriteDomain=gmail.com
 FromLineOverride=YES
 UseSTARTTLS=YES
-# Replace user with your Gmail username
+# Replace with your Gmail username
 AuthUser=user@gmail.com
-# Replace with your application specific password: https://security.google.com/settings/security/apppasswords
+# Allow less secure apps to access your account: https://support.google.com/accounts/answer/6010255
+# Replace with your application specific password: https://support.google.com/mail/answer/185833
 AuthPass=
 ```
+
+#### Send a test email - replace user below
+echo "This is the body" | mail -s "Subject" user@gmail.com
+
+Full SSMTP docs (including how to secure it): https://wiki.archlinux.org/index.php/SSMTP
 
 ## Install mpack
 ```bash
