@@ -1,9 +1,6 @@
 # powerpi
 This Raspberry Pi prepaid electricity monitor takes a photo of the amount of money you have left and emails it to you at a predefined time via a cronjob.
 
-# Install
-Clone to the ~/powerpi directory on your Raspberry Pi
-
 # Dependencies
 - Raspberry Pi (any)
 - Raspberry Pi camera module (any)
@@ -13,6 +10,19 @@ Clone to the ~/powerpi directory on your Raspberry Pi
 - raspistill
 - ssmtp
 - mpack
+
+# Install
+Clone to the ~/powerpi directory on your Raspberry Pi
+
+## Install ssmtp
+```bash
+sudo apt-get install ssmtp
+```
+
+## Install mpack
+```bash
+sudo apt-get install mpack
+```
 
 # Configure
 - Replace RECIPIENTS="user@gmail.com" with your email address
