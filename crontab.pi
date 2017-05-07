@@ -1,0 +1,1 @@
+0 20 * * * /home/pi/powerpi/powerpi.sh >/dev/null 2>/dev/null
