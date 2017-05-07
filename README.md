@@ -4,7 +4,7 @@ This Raspberry Pi prepaid electricity monitor takes a photo of the amount of mon
 # Dependencies
 - Raspberry Pi (any)
 - Raspberry Pi camera module (any)
-- Enabled camera module, run: 'sudo raspi-config' to enable it, then reboot
+- Enabled camera module, run: ```sudo raspi-config``` to enable it, then reboot
 
 # Package dependencies
 - raspistill
@@ -13,6 +13,9 @@ This Raspberry Pi prepaid electricity monitor takes a photo of the amount of mon
 
 # Install
 Clone to the ~/powerpi directory on your Raspberry Pi
+```bash
+git clone https://github.com/n8kowald/powerpi.git ~/powerpi
+```
 
 ## Install ssmtp
 ```bash
@@ -48,8 +51,8 @@ sudo chmod +x ~/powerpi/powerpi.sh
 ```
 
 # Configure
-- Replace RECIPIENTS="user@gmail.com" with your email address
-- Play with the settings passed to 'raspistill'.
+- Replace ```RECIPIENTS="user@gmail.com"``` with your email address in ~/powerpi/powerpi.sh
+- Play with the settings passed to 'raspistill' to get the best photo quality
 
 # Create the cronjob
 Edit your crontab by typing ```crontab -e``` and paste the following command
