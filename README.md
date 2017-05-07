@@ -6,7 +6,8 @@ This Raspberry Pi prepaid electricity monitor takes a photo of the amount of mon
 # Dependencies
 - Raspberry Pi (any)
 - Raspberry Pi camera module (any)
-- Enabled camera module, run: ```sudo raspi-config``` to enable it, then reboot
+- Enabled camera module. Run: ```sudo raspi-config``` to enable, then reboot
+- Raspberry Pi Wi-Fi Dongle (if using a Raspberry Pi < 3)
 
 # Package dependencies
 - raspistill
@@ -63,7 +64,7 @@ Edit your crontab by typing ```crontab -e``` and paste the following command
 
 # Configure
 - Replace ```RECIPIENTS="user@gmail.com"``` with your email address in ```~/powerpi/powerpi.sh```
-- Play with the settings passed to 'raspistill' to get the best photo quality
+- Play with the settings passed to 'raspistill' to get the best photo for your light conditions
 
 # Alias (optional)
 Trigger the script by typing 'elec', or whatever you want.
