@@ -17,13 +17,12 @@ command -v ssmtp >/dev/null 2>&1 || { echo >&2 "Requires ssmtp but it's not inst
 echo "Taking photo... takes 7 seconds"
 
 # Night mode, flip vertically and horizontally
-raspistill -ex night -vf -hf -w 650 -h 450 -o "${DIR}${FILENAME}" -t 7000 -br 57 -sh 75
+raspistill -ex night -vf -hf -w 650 -h 450 -t 7000 -br 57 -sh 75 -o "${DIR}${FILENAME}"
 
 # Email the captured photo
 mpack -s "Power left - $SUBJECT_DATE" -c image/jpeg ${DIR}${FILENAME} "$RECIPIENTS"
 
-EXIT_CODE=$?
-if [ "$EXIT_CODE" -eq 0 ]
+if [ "$?" -eq 0 ]
 then
 	echo "Photo emailed successfully to $RECIPIENTS"
 else
@@ -33,8 +32,7 @@ fi
 # Delete the photo
 rm ${DIR}${FILENAME}
 
-EXIT_CODE=$?
-if [ "$EXIT_CODE" -eq 0 ]
+if [ "$?" -eq 0 ]
 then
 	echo "Photo deleted successfully"
 fi
