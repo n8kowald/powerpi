@@ -1,7 +1,8 @@
 #!/bin/bash
 
 DATE=$(date +%F)
-SUBJECT_DATE=$(date +"%A %d %b %Y,%r")
+SUBJECT_DATE=$(date +"%A %d %b %Y")
+EMAIL_SUBJECT="Power left - $SUBJECT_DATE"
 FILENAME="$DATE.jpg"
 DIR="/home/pi/powerpi/"
 
@@ -20,7 +21,7 @@ echo "Taking photo... takes 7 seconds"
 raspistill -ex night -vf -hf -w 650 -h 450 -t 7000 -br 57 -sh 75 -o "${DIR}${FILENAME}"
 
 # Email the captured photo
-mpack -s "Power left - $SUBJECT_DATE" -c image/jpeg ${DIR}${FILENAME} "$RECIPIENTS"
+mpack -s "$EMAIL_SUBJECT" -c image/jpeg ${DIR}${FILENAME} "$RECIPIENTS"
 
 if [ "$?" -eq 0 ]
 then
@@ -30,7 +31,7 @@ else
 fi
 
 # Delete the photo
-rm ${DIR}${FILENAME}
+rm "${DIR}${FILENAME}"
 
 if [ "$?" -eq 0 ]
 then
