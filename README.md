@@ -17,7 +17,7 @@ This Raspberry Pi prepaid electricity monitor takes a photo of the amount of mon
 # Install
 Clone to the ``~/powerpi`` directory on your Raspberry Pi
 ```bash
-git clone https://github.com/n8kowald/powerpi.git ~/powerpi
+git clone git@github.com:n8kowald/powerpi.git ~/powerpi
 ```
 
 ## Install ssmtp
