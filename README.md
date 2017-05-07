@@ -7,6 +7,7 @@ Clone to the ~/powerpi directory on your Raspberry Pi
 # Dependencies
 - Raspberry Pi (any)
 - Raspberry Pi camera module (any)
+- Enabled camera module, run: 'sudo raspi-config'
 
 # Package dependencies
 - raspistill
@@ -16,7 +17,6 @@ Clone to the ~/powerpi directory on your Raspberry Pi
 # Configure
 - Replace RECIPIENTS="user@gmail.com" with your email address
 - Play with the settings passed to 'raspistill'.
-- Enable the camera by running: 'sudo raspi-config'
 
 # SSMTP settings
 ```bash
@@ -26,7 +26,7 @@ mailhub=smtp.gmail.com:587
 rewriteDomain=gmail.com
 FromLineOverride=YES
 UseSTARTTLS=YES
-# Replace with your Gmail username
+# Replace user with your Gmail username
 AuthUser=user@gmail.com
 # Replace with your application specific password: https://security.google.com/settings/security/apppasswords
 AuthPass=
@@ -35,20 +35,20 @@ AuthPass=
 # Example Cron
 Edit your crontab and paste the following command
 ```bash
+# Edit crontab
 crontab -e
 ```
 
 ```bash
-# Run daily at 20:00
+# Run daily at 20:00 - generate a different time here: http://crontab-generator.org
 0 20 * * * /home/pi/powerpi/powerpi.sh >/dev/null 2>/dev/null
 ```
 
-#Bash alias
+# Alias
 ```bash
+# Edit your ~/.bashrc
 Edit ~/.bashrc
-```
 
-```bash
-# Run on demand
+# Paste the following to run the script on demand
 alias elec='sh /home/pi/powerpi/powerpi.sh'
 ```
