@@ -60,10 +60,12 @@ Edit your crontab by typing ```crontab -e``` and paste the following command
 ```
 
 # Configure
-- Replace ```RECIPIENTS="user@gmail.com"``` with your email address in ~/powerpi/powerpi.sh
+- Replace ```RECIPIENTS="user@gmail.com"``` with your email address in ```~/powerpi/powerpi.sh```
 - Play with the settings passed to 'raspistill' to get the best photo quality
 
-# Alias
+# Alias (optional)
+Trigger the script by typing 'elec', or whatever you want.
+
 ```bash
 # Edit your ~/.bashrc
 vim ~/.bashrc
