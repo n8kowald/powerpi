@@ -76,7 +76,7 @@ Edit your crontab by typing ```crontab -e``` and paste the following command
 ```bash
 raspistill --exposure night --vflip --hflip --width 650 --height 450 --timeout 7000 --brightness 57 --sharpness 75 --output "${DIR}${FILENAME}"
 ```
-Full list of options by typing ```raspistill```
+See the full list of options by typing ```raspistill```
 
 # Alias (optional)
 Run this script by typing 'powerpi', or change the alias name.
