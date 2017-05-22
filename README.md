@@ -12,6 +12,7 @@ This Raspberry Pi prepaid energy monitor takes a photo of the amount of money yo
 # Package dependencies
 - raspistill
 - ssmtp
+- mailutils
 - mpack
 
 # Install
@@ -20,9 +21,10 @@ Clone to the ``~/powerpi`` directory on your Raspberry Pi
 git clone git@github.com:n8kowald/powerpi.git ~/powerpi
 ```
 
-## Install ssmtp
+## Install ssmtp and mailutils
 ```bash
 sudo apt-get install ssmtp
+sudo apt-get install mailutils
 ```
 ### SSMTP settings
 Edit your SSMTP config
